@@ -51,7 +51,7 @@ void quick_sort(T& array, int start, int end){
     }
 
     // 交换基准和第一个元素
-    swap(array[start], array[left]);
+    swap(array[pivot], array[left]);
     pivot = left;
 
     // 递归
@@ -67,7 +67,7 @@ int main(int argc, char const *argv[])
     // int list[]{5, 6};
     int list[]{5, 6, 3, 8, 2, 1, 7, 9};
 
-    quick_sort(list, 0, end(list)-begin(list));
+    quick_sort(list, 0, end(list)-begin(list)-1);
 
     for(auto li : list){
         cout << li << " ";
